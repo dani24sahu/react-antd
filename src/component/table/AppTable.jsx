@@ -5,20 +5,20 @@ const AppTable = () => {
   const data = [
     {
       name: "John Brown",
-      age: 32,
+      age: 22,
       address: "New York No. 1 Lake Park",
       key: "1",
     },
     {
       name: "David Brown",
-      age: 32,
-      address: "New York No. 1 Lake Park",
+      age: 16,
+      address: "New York No. 2 Lake Park",
       key: "2",
     },
     {
       name: "Bob Brown",
-      age: 32,
-      address: "New York No. 1 Lake Park",
+      age: 25,
+      address: "New York No. 3 Lake Park",
       key: "3",
     },
   ];
@@ -28,16 +28,24 @@ const AppTable = () => {
       title: "Name",
       dataIndex: "name",
       key: "key",
+      render: (name) => <a>{name}</a>,
     },
     {
-        title: 'Age',
-        dataIndex: 'age',
-        key: 'key'
+      title: "Age",
+      dataIndex: "age",
+      key: "key",
     },
     {
-        title: 'Address',
-        dataIndex: 'address',
-        key: 'key'
+      title: "Address",
+      dataIndex: "address",
+      key: "key",
+    },
+    {
+      title: "Graduated?",
+      key: "key",
+      render: payload => {
+        return payload.age > 22 ? "Yes" : "No";
+      }
     },
   ];
   return (
