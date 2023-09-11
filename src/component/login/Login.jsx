@@ -31,22 +31,27 @@ const Login = () => {
             closable
           ></Alert>
         )}
-        <Form onFinish={onFinish}>
-          <Form.Item label="Username" name="username" required>
-            <Input placeholder="Enter username"></Input>
-          </Form.Item>
-          <Form.Item label="Password" name="password" required>
-            <Input.Password
-              placeholder="Enter password"
-              name="password"
-            ></Input.Password>
-          </Form.Item>
-          <Form.Item>
-            <Button type="primary" htmlType="submit">
-              Login
-            </Button>
-          </Form.Item>
-        </Form>
+        <div className="box1">
+          <Form onFinish={onFinish}>
+            <Form.Item label="Username" name="username" required>
+              <Input placeholder="Enter username"></Input>
+            </Form.Item>
+            <Form.Item label="Password" name="password" required>
+              <Input.Password
+                placeholder="Enter password"
+                name="password"
+              ></Input.Password>
+            </Form.Item>
+            <Form.Item>
+              <Button type="primary" htmlType="submit">
+                Login
+              </Button>
+            </Form.Item>
+          </Form>
+        </div>
+        <div className="box2">
+          
+        </div>
       </div>
     </>
   );
